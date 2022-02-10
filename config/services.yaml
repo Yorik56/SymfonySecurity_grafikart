@@ -4,6 +4,14 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
+    app.mysql_hostname: '%env(MYSQL_HOSTNAME)%'
+    app.mysql_username: '%env(MYSQL_USERNAME)%'
+    app.mysql_password: '%env(MYSQL_PASSWORD)%'
+    app.mysql_database: '%env(MYSQL_DATABASE)%'
+    app.pgsql_hostname: '%env(PGSQL_HOSTNAME)%'
+    app.pgsql_username: '%env(PGSQL_USERNAME)%'
+    app.pgsql_password: '%env(PGSQL_PASSWORD)%'
+    app.pgsql_database: '%env(PGSQL_DATABASE)%'
 
 services:
     # default configuration for services in *this* file
