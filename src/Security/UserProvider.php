@@ -5,7 +5,6 @@ namespace App\Security;
 use App\DB_Factory\DBFactory;
 use App\Entity\User;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
-use Symfony\Component\Security\Core\Exception\UserNotFoundException;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
@@ -22,7 +21,6 @@ class UserProvider implements UserProviderInterface
             throw new UnsupportedUserException(sprintf('Invalid user class "%s".', get_class($user)));
         }
         //-- On vérifie que l'utilisateur à un identifiant
-
         //-- On charge l'utilisateur depuis la base de données
 
         return $user;
